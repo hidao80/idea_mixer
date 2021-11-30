@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idea mixer</title>
+    <script>
+        function mix() {
+            const csv_text = document.getElementById("csv_text").value;
+            const csv_array = csv_text.split(",");
+            const csv_array_length = csv_array.length;
+
+            document.getElementById("result").innerHTML = "";
+
+            for (let i = 0; i < csv_array_length - 2; i++) {
+                for (let j = i + 1; j < csv_array_length - 1; j++) {
+                    for (let k = j + 1; k < csv_array_length; k++) {
+                        // document.getElementById("csv_text").textContent += csv_array[i].trim() + ", " + csv_array[j].trim() + ", " + csv_array[k].trim() + "<br>\n";
+                        document.getElementById("result").innerHTML += csv_array[i].trim() + ", " + csv_array[j].trim() + ", " + csv_array[k].trim() + "<br>\n";
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Idea mixer</h1>
+    <input type="text" name="csv_text" id="csv_text">
+    <button id="btn" onclick="mix()">List up</button>
+    <div id="result">
+
+    </div>
+</body>
+
+</html>
