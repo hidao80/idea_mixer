@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -17,7 +17,6 @@
             for (let i = 0; i < csv_array_length - 2; i++) {
                 for (let j = i + 1; j < csv_array_length - 1; j++) {
                     for (let k = j + 1; k < csv_array_length; k++) {
-                        // document.getElementById("csv_text").textContent += csv_array[i].trim() + ", " + csv_array[j].trim() + ", " + csv_array[k].trim() + "<br>\n";
                         document.getElementById("result").innerHTML += csv_array[i].trim() + ", " + csv_array[j].trim() + ", " + csv_array[k].trim() + "<br>\n";
                     }
                 }
