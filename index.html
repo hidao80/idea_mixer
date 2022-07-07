@@ -8,16 +8,15 @@
     <title>Idea mixer</title>
     <script>
         function mix() {
-            const csv_text = document.getElementById("csv_text").value;
-            const csv_array = csv_text.split(",");
-            const csv_array_length = csv_array.length;
+            const csv_array = document.getElementById("csv_text").value.split(",");
+            const output = document.getElementById("result");
 
-            document.getElementById("result").innerHTML = "";
-
-            for (let i = 0; i < csv_array_length - 2; i++) {
-                for (let j = i + 1; j < csv_array_length - 1; j++) {
-                    for (let k = j + 1; k < csv_array_length; k++) {
-                        document.getElementById("result").innerHTML += csv_array[i].trim() + ", " + csv_array[j].trim() + ", " + csv_array[k].trim() + "<br>\n";
+            for (let i of csv_array) {
+                for (let j = of csv_array) {
+                    for (let k = of csv_array) {
+                        if (i != j && i != k && j != k) {
+                            output.innerHTML = output.innerHTML + `${i}, ${j}, ${k}<br>\n";
+                        }
                     }
                 }
             }
